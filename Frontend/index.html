@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Navigation App</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><button id="goToProjectsButton">Go to Projects</button></li>
+        <li><a href="#">Products</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <div id="projectsDropdown" class="dropdown">
+      <aside class="left-section">
+        <!-- Images will be dynamically inserted here -->
+      </aside>
+      <section class="right-section">
+        <input type="text" id="searchBar" placeholder="Search...">
+        <hr class="horizontal-line">
+        <article>
+          <h2>Systems</h2>
+          <ul id="systemsList"></ul>
+          <button id="addSystemGroup">+ Add Group</button>
+        </article>
+        <hr class="horizontal-line">
+        <article>
+          <h2>User Agents</h2>
+          <ul id="userAgentsList"></ul>
+          <button id="addUserAgentGroup">+ Add Group</button>
+        </article>
+      </section>
+    </div>
+  </main>
+  
+  <script src="script.js"></script>
+</body>
+</html>

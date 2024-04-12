@@ -1,0 +1,81 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+header nav ul {
+    background-color: blue;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.dropdown {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    width: 40%;
+    margin-top: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.dropdown.active {
+    display: block;
+}
+
+hr {
+    border: 1px solid black;
+}
+
+h2 {
+    color: blue;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    padding: 5px;
+}
+
+ul li:hover {
+    background-color: #f0f0f0;
+}
+
+.highlight {
+    background-color: yellow;
+    font-weight: bold;
+}
+
+.group-container {
+    display: flex;
+}
+
+.group-container section {
+    flex: 1;
+}
+
+.vertical-line {
+    border-left: 1px solid #ccc;
+    height: 100%;
+}
+
+.horizontal-line {
+    border: none;
+    border-top: 1px solid black; /* Horizontal line style */
+    margin: 5px 0; /* Adjust margin for spacing */
+  }
+
+.left-section {
+    float: left; /* Float the left section to the left */
+    /* Add any additional styling for the left section */
+  }
+  
+.right-section {
+    margin-left: 200px; /* Adjust margin to create space for the left section */
+    /* Add any additional styling for the right section */
+}
