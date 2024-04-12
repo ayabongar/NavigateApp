@@ -7,10 +7,12 @@ using System;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
-builder.Services.AddControllers(); // Add this line to register controllers
 
-// Add Swagger services
+// register controllers
+builder.Services.AddControllers(); 
+ 
+
+// Add Swagger 
 builder.Services.AddSwaggerGen(c =>
 {
     c.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo { Title = "NavigationApp", Version = "v1" });
@@ -25,7 +27,7 @@ app.UseCors(policy => policy
     .AllowAnyHeader()
 );
 
-// Configure the HTTP request pipeline.
+//  the HTTP request pipeline config.
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
@@ -35,6 +37,8 @@ if (app.Environment.IsDevelopment())
         c.RoutePrefix = string.Empty; // Set Swagger UI at the root URL
     });
 }
+
+app.UseCors("AllowFrontend");
 
 app.UseHttpsRedirection();
 

@@ -31,19 +31,19 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Populate Systems and User Agents lists with fetched data
     async function populateLists() {
-        const data = await fetchData("/api/projects/GetProjects");
+        const data = await fetchData("http://localhost:5000/api/projects/GetProjects");
         if (data) {
             populateList(systemsList, data[0].groups);
             populateList(userAgentsList, data[1].groups);
         }
     }
-
+    
     // Function to populate a list with items
     function populateList(listElement, items) {
         listElement.innerHTML = "";
         items.forEach(item => {
             const li = document.createElement("li");
-            li.textContent = item.name; // Assuming 'name' is the property containing the item's name
+            li.textContent = item.name; 
             listElement.appendChild(li);
         });
     }

@@ -35,8 +35,6 @@ namespace NavigationApp.Controllers
                 //Deserializing JSON data into a list of Root objects
                 List<Root> projects = JsonSerializer.Deserialize<List<Root>>(jsonData);
 
-                //IEnumerable<Root> projects = JsonSerializer.Deserialize<IEnumerable<Root>>(jsonData);
-
                 //filtering based on search query
                 if (!string.IsNullOrEmpty(searchQuery))
                 {
